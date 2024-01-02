@@ -25,5 +25,4 @@ jobs:
 
     - name: CI Run tests
       run: |
-        chmod +x start_test.sh
-        ./start_test.sh
+        start_test.sh
