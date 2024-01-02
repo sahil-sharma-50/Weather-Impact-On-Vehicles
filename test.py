@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from ..pipeline import data_pipeline
+import data_pipeline
 
 
 # Test Data Extraction for both Accident and Weather data:
@@ -60,12 +60,12 @@ def test_preprocessing():
 # Test Save Dataset after Extraction and Transformation:
 def test_saved_file():
     data_pipeline.main()
-    assert os.path.isfile('../data/processed_database.sqlite'), "Output database file does not exist."
+    assert os.path.isfile('data/processed_database.sqlite'), "Output database file does not exist."
     print("Data Saved: Test Passed")
 
 
 if __name__ == "__main__":
-    accident_data_path = '../data/accident_data.csv'
+    accident_data_path = 'data/accident_data.csv'
     weather_data_url = 'https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/monthly'
     columns_rename = {
         'UMONAT': 'month',

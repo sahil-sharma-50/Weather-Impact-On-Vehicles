@@ -58,14 +58,14 @@ def merge_data(accidents_df, weather_df):
     return df
 
 
-def save_to_sqlite(data_df, table_name, db_path='../data/processed_database.sqlite'):
+def save_to_sqlite(data_df, table_name, db_path='data/processed_database.sqlite'):
     os.makedirs(os.path.dirname(db_path), exist_ok=True)
     with sqlite3.connect(db_path) as conn:
         data_df.to_sql(table_name, conn, index=False, if_exists='replace')
 
 
 def main():
-    accidents = load_accident_df('../data/accident_data.csv')
+    accidents = load_accident_df('data/accident_data.csv')
     weather_df = load_weather_df('https://opendata.dwd.de/climate_environment/CDC/regional_averages_DE/monthly')
     drop_columns = ['LAND', 'LOR', 'UJAHR', 'XGCSWGS84', 'YGCSWGS84', 'BEZ', 'OBJECTID', 'STRASSE',
                     'USTUNDE', 'UWOCHENTAG', 'UKATEGORIE', 'UART', 'UTYP1', 'ULICHTVERH', 'IstSonstige','LINREFX','LINREFY']
