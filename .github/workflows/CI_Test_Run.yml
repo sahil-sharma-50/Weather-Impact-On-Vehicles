@@ -24,4 +24,6 @@ jobs:
         pip install -r requirements.txt
 
     - name: CI Run tests
-      run: bash ./test.sh
+      run: |
+        chmod +x test.sh
+        ./start_test.sh
