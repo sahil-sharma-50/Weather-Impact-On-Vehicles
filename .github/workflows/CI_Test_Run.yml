@@ -25,4 +25,4 @@ jobs:
 
     - name: CI Run tests
       run: |
-        start_test.sh
+        ./start_test.sh
