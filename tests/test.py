@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from pipeline import data_pipeline
+from ..pipeline import data_pipeline
 
 
 # Test Data Extraction for both Accident and Weather data:
