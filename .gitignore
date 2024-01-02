@@ -8,3 +8,4 @@
 /project/__pycache__
 /venv/
 .idea
+/pipeline/__pycache__
