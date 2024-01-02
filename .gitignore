@@ -1,0 +1,10 @@
+.DS_Store
+/data/*.sqlite
+!/data/.gitkeep
+/exercises/*.txt
+/exercises/venv/
+*.sqlite
+/exercises/*.sqlite
+/project/__pycache__
+/venv/
+.idea
